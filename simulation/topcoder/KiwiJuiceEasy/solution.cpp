@@ -1,4 +1,7 @@
+#include <iostream>
+#include <algorithm>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -8,15 +11,13 @@ class KiwiJuiceEasy {
 			int moves = fromId.size() / fromId[0];
 			
 			for(int i = 0 ; i < moves ; i++) {
-				int from = fromId[i];
-				int to = toId[i];
-				bottles[to] = bottles[to] + bottles[from];
-				bottles[from] = 0;
+				bottles[toId[i]] = bottles[toId[i]] + bottles[fromId[i]];
+				bottles[fromId[i]] = 0;
 				
-				if(bottles[to] > capacities[to]) {
-					int overflow = bottles[to] - capacities[to];
-					bottles[to] = bottles[to] - overflow;
-					bottles[from] = overflow;
+				if(bottles[toId[i]] > capacities[toId[i]]) {
+					int overflow = bottles[toId[i]] - capacities[toId[i]];
+					bottles[toId[i]] = bottles[toId[i]] - overflow;
+					bottles[fromId[i]] = overflow;
 				} 		
 			return bottles;
 		}
