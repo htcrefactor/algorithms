@@ -18,7 +18,9 @@ class KiwiJuiceEasy {
 					int overflow = bottles[toId[i]] - capacities[toId[i]];
 					bottles[toId[i]] = bottles[toId[i]] - overflow;
 					bottles[fromId[i]] = overflow;
-				} 		
+				}
+			}
+
 			return bottles;
 		}
 };
