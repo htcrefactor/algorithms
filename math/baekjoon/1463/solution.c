@@ -12,10 +12,7 @@ int main() {
     int n = 0;
     scanf("%d", &n);
     
-    int* array = (int*)malloc(sizeof(int) * (n + 1));
-    for (int index = 0 ; index < n + 1 ; index++) {
-        array[index] = 0;
-    }
+    int* array = (int*)calloc(n + 1, sizeof(int));
     
     array[1] = 1;
 
