@@ -1,5 +1,5 @@
 # algorithms
-This repository stores code I write while solving algorithm problems.
+This repository stores code I wrote to train data structures and algorithms.
 
 ## Problem Sources
 - [Baekjoon Online Judge](https://www.acmicpc.net/)
